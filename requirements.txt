@@ -1,0 +1,9 @@
+pandas==1.5.3
+numpy==1.23.5
+nltk==3.8.1
+swifter==1.4.0
+spacy==3.6.1
+scikit-learn==1.2.2
+gunicorn==21.2.0
+flask-cors==4.0.0
+Flask

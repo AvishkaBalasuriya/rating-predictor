@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve rate-predictor
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/Users/avishkabalasuriya/Programming/Yomal
+Environment="PATH=/Users/avishkabalasuriya/Programming/Yomal/venv/bin"
+ExecStart=/Users/avishkabalasuriya/Programming/Yomal/venv/bin/gunicorn --workers 3 --bind unix:rate-predictor.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
